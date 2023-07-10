@@ -98,8 +98,9 @@ function Projects() {
           <p1>A sequence detector built using shift registers. Output goes high for 0001 or 1110.</p1>
         </a>
       </div>
+      <br/><br/><br/><br/>
       <div id="OC"> 
-        <a id="GitHub" href={'https://github.com/kri-shah'} target="_blank" rel="noreferrer">GitHub</a>
+        <a id="GitHub2" href={'https://github.com/kri-shah'} target="_blank" rel="noreferrer">GitHub</a>
       </div>
       <div id="gittxt1" style={{ display: isHovered ? 'block' : 'none' }}>
         <p1>Click to view the Github!</p1>

@@ -20,16 +20,18 @@ function About() {
         <div class="fade-in-image">
           <h1>About Me</h1>
           <p1 id="pa">
-            Hi, I'm Krish Shah! I'm a full stack developer and AI 
-            undergraduate reasercher from the University of Connecticut. I am a rising sophomore studying 
+            Hi, I'm Krish Shah! I'm a full-stack developer and AI 
+            undergraduate researcher from the University of Connecticut. I am a rising sophomore studying 
             Computer Science and Engineering.
+
           </p1>
           <br></br>
           <h1>Skills and Expierences</h1>
           <p1 id="pa">
-            I have expierence using several languages and technologies, and am most familiar with Python, Java, C++, 
-            ReactJS, HTML, and CSS. I'm fluent in English, Gujurati, and proficent in Spanish. 
-            Here are a few of my expierences:
+            I have experience using several languages and technologies and am most familiar with Python, Java, C++, 
+            ReactJS, HTML, and CSS. I'm fluent in English, Gujurati and proficient in Spanish. 
+            Here are a few of my experiences:
+
           </p1>
           </div>
         <br></br>
@@ -44,8 +46,9 @@ function About() {
                 <br></br>
                 <h id="text1size"> Volunteer for Engineers Without Borders</h>
                 <p id="t1s">
-                Collaborated with a team of engineers and environmental experts to analyze data and develop strategies to enhance environmental sustainability in Hartford, CT.
-                Conducted comprehensive research to gather relevant data, employing statistical methods and visualization tools to interpret and present findings effectively.
+                -Collaborated with engineers and environmental experts to analyze data and develop strategies to enhance environmental sustainability in Hartford, CT.
+                <br></br> <br></br> 
+                -Conducted comprehensive research to gather relevant data, employing statistical methods and visualization tools to interpret and present findings effectively.
 
                 </p>
               </div>
@@ -57,10 +60,14 @@ function About() {
               </div>
               <div id="txt1">
                 <br></br>
-                <h id="text1size"> Programmer for FROST Robotics</h>
-                <p id="t1s">Program combat robots using Robot Operating System and C++.
+                <h id="text1size">Robotics Programmer for FROST Robotics</h>
+                <p id="t1s">-Program combat robots using Robot Operating System and C++.
                   <br></br> 
-                  Use physics and C to program Melty Brain style robots (constantly spinning combat robots)
+                  <br></br> 
+                  -Collaborate closely with mechanical and electrical engineers to integrate software and hardware components seamlessly, resulting in highly efficient and reliable combat robots.
+                  <br></br><br></br> 
+                  -Conduct thorough testing and debugging of robot software to ensure optimal battle performance, responsiveness, and precision.
+
                 </p>
               </div>
             </div>
@@ -73,8 +80,10 @@ function About() {
               <div id="txt1">
                 <br></br>
                 <h id="text1size"> Volunteer for America Reads</h>
-                <p id="t1s">Tutored third grade students at Willington Elementary School (2023) and tutored fifth grader students (2022) at 
-                  North Windham Elementary School on reading comprehension and algebra skills.</p>
+                <p id="t1s">
+                  -Tutored third-grade students at Willington Elementary School (2023) and tutored fifth-grader students (2022) at 
+                  <br></br> <br></br> 
+                  -North Windham Elementary School on reading comprehension and algebra skills.</p>
               </div>
             </div>
             
@@ -86,9 +95,11 @@ function About() {
                 <br></br>
                 <h id="text1size"> Crew Member for Dunkin' </h>
                 <p id="t1s">                    
-                  Managed multiple tasks simultaneously, such as taking orders, processing payments, and handling customer inquiries, while maintaining a positive and friendly demeanor.
-                  Efficiently prepare a plethora of beverages in an extremely high stress enviorment.
-                  Collaborated with team members to ensure smooth operations during peak hours, contributing to improved customer satisfaction and increased sales.
+                  -Oversee inventory for wide-ranging product catalog using Excel
+                  <br/><br/>
+                  -Closely monitor cash handling and balancing registers to ensure proper cash flow distribution
+                  <br/><br/>
+                  -Collaborate with team members to ensure smooth operations during peak hours, contributing to improved customer satisfaction and increased sales.
 
                 </p>
               </div>   
@@ -97,7 +108,7 @@ function About() {
           
           
           </div>
-          <p>Click above for my full resume!</p>
+          <a id="resume2" href={samplePDF1} target="_blank" rel="noreferrer">Click here or above for my full resume!</a>
         </div>
         
         

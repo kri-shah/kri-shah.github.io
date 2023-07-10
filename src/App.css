@@ -80,6 +80,7 @@ a:hover, a:active {
 .Projects{
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 #project1{
@@ -233,7 +234,6 @@ img {
   width: 350px;
 
   font-size: 20px; 
-
 }
 
 #text1size{
@@ -243,6 +243,8 @@ img {
 }
 #t1s{
   font-size: 15px; 
+  text-align: left;
+  margin: 6px;
 }
 
 .carousel-control-prev,
@@ -263,6 +265,7 @@ img {
   right: 50px;
 }
 #Contact{
+  width: 100%;
   display: flex;
   flex-direction: column;
   
@@ -361,7 +364,7 @@ img {
   cursor: pointer;
   margin: 10px;
   position:relative;
-  left:-10px;
+  
 }
 #Link:hover{
   background-color: hsla(0, 0%, 53%, 0.602);
@@ -379,7 +382,7 @@ img {
   border: 4px solid rgba(255, 255, 255, 0.652);
   cursor: pointer;
   position:relative;
-  left:-12px;
+  left:-5.75px;
 }
 #EmailMe:hover{
   background-color: hsla(0, 0%, 53%, 0.602);
@@ -390,18 +393,15 @@ img {
   background-color:hsla(0, 0%, 34%, 0);
   border-radius: 12px;
   font-size: 25px;
-  width: 70px;
+  width: 50px;
   height: 10px;
   font-family: "Lucida Console", "Courier New", monospace;
-  /*color: rgba(33, 33, 33, 0.652);*/
-  color: rgba(255, 255, 255, 0.652);  
+  color: rgba(255, 255, 255, 0.652);
   font-weight: bold;
   border: 4px solid rgba(255, 255, 255, 0.652);
   cursor: pointer;
-  margin: 10px;
   position:relative;
-  left:-13.5px;
-  
+  left:5px;
 }
 #GitHub:hover{
   background-color: hsla(0, 0%, 53%, 0.602);
@@ -416,4 +416,11 @@ img {
   
 }
 
+#resume2{
+  background-color: hsla(0, 0%, 53%, 0);
 
+}
+#resume2:hover{
+  background-color: hsla(0, 0%, 53%, 0);
+
+}

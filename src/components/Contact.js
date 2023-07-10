@@ -79,10 +79,10 @@ function Contact() {
       <div id="OtherContacts">
        
 
-        
+        <a id="GitHub" href={'https://github.com/kri-shah'} target="_blank" rel="noreferrer">GitHub</a>        
         <a id="Link" href={'https://www.linkedin.com/in/krish-shah-045680227/'} target="_blank" rel="noreferrer">Linkedin</a>
         <a id="EmailMe" href={"mailto: krishdshah0@gmail.com"} target="_blank" rel="noreferrer">Email</a>
-        <a id="GitHub" href={'https://github.com/kri-shah'} target="_blank" rel="noreferrer">GitHub</a>
+
         
       </div>
     </div>

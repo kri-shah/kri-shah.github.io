@@ -12,7 +12,7 @@ const TypingAnimation = ({ text, level }) => {
         setDisplayedText(displayedText + text[currentIndex]);
         setCurrentIndex(currentIndex + 1);
       }
-    }, 135);
+    }, 100);
 
     return () => clearInterval(intervalId);
   }, [displayedText, currentIndex, text]);
