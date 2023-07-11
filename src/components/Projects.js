@@ -51,7 +51,7 @@ function Projects() {
       <div id="projects-container">
         <a
           id="proj1"
-          href="https://github.com/kri-shah/Hill-Code"
+          href="https://github.com/kri-shah/kri-shah.github.io"
           target="_blank"
           rel="noreferrer"
           onMouseEnter={handleMouseEnter}
@@ -59,7 +59,7 @@ function Projects() {
         >
           <div id="proj1img"></div>
           <h5>Portfolio Website</h5>
-          <p1>Personal portfolio website built using ReactJS, HTML, CSS, and JavaScript</p1>
+          <p1>Personal portfolio website built using ReactJS, HTML, CSS, and JavaScript, Node.js</p1>
         </a>
         <a
           id="proj2"

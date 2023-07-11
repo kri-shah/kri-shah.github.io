@@ -122,6 +122,11 @@ a:hover, a:active {
 #pa{
   width:85%;
 }
+#pa2{
+  width:85%;
+
+}
+
 
 img {
   width: 440px;
@@ -293,8 +298,11 @@ img {
   font-size: 15px;
   color: #e9e9e9;
   font-weight: 10;
-}
 
+}
+::placeholder{
+  color:rgb(242, 242, 242); 
+}
 #TextBox2{
   background-color: hsla(0, 0%, 34%, 0.602);
   height: 3.5vh;
@@ -423,4 +431,13 @@ img {
 #resume2:hover{
   background-color: hsla(0, 0%, 53%, 0);
 
+}
+
+#abtme2{
+  display: flex;
+  flex-direction: column;
+}
+
+#sne{
+  height: 42px;
 }

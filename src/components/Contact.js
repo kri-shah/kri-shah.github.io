@@ -49,7 +49,7 @@ function Contact() {
           id="TextBox2"
           value={message2}
           onChange={(e) => setMessage2(e.target.value)}
-          placeholder=""
+          placeholder="Server currently down :("
           rows={4}
           cols={50}
         ></textarea>
@@ -63,7 +63,7 @@ function Contact() {
           id="TextBox"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder=""
+          placeholder="Server currently down :("
           rows={4}
           cols={50}
         ></textarea>

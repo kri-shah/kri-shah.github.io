@@ -6,6 +6,19 @@ import TypingAnimation from './TypingAnimation';
 import samplePDF1 from "./Resume.pdf";
 
 function About() {
+  const text = "About Me";
+  const text2 = "Skills and Expierences";
+    const [showSecondTyping, setShowSecondTyping] = React.useState(false);
+    
+    // Function to set showSecondTyping state to true after 3 seconds
+    React.useEffect(() => {
+      const timeoutId = setTimeout(() => {
+        setShowSecondTyping(true);
+      }, 1900); // Delay of 3 seconds 
+      
+      // Clean up function to clear the timeout when the component unmounts
+      return () => clearTimeout(timeoutId);
+    }, []); // Empty dependency array to run this effect only once on mount
   
   return (
     <body id = "Abt">
@@ -18,21 +31,26 @@ function About() {
       <body id = "Abt2">
         <br></br>
         <div class="fade-in-image">
-          <h1>About Me</h1>
+          <TypingAnimation text={text} level="h1" />
+
           <p1 id="pa">
             Hi, I'm Krish Shah! I'm a full-stack developer and AI 
             undergraduate researcher from the University of Connecticut. I am a rising sophomore studying 
             Computer Science and Engineering.
 
           </p1>
-          <br></br>
-          <h1>Skills and Expierences</h1>
-          <p1 id="pa">
-            I have experience using several languages and technologies and am most familiar with Python, Java, C++, 
-            ReactJS, HTML, and CSS. I'm fluent in English, Gujurati and proficient in Spanish. 
-            Here are a few of my experiences:
+          <br/>
+          <div id="abtme2"> 
+            <div id="sne">
+              {showSecondTyping && <TypingAnimation text={text2} level="h1" />}
+            </div>
+            <p1 id="pa2">
+              I have experience using several languages and technologies and am most familiar with Python, Java, C++, 
+              HTML, JavaScript, ReactJS, and CSS. Here are a few of my expierences:
 
-          </p1>
+            </p1>
+          </div>
+
           </div>
         <br></br>
         <div class="fade-in-image">
