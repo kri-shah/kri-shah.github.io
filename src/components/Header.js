@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
-import samplePDF1 from "./Resume.pdf";
+import samplePDF1 from "./Krish_Shah_Resume.pdf";
 
 function Header() { 
   return (
