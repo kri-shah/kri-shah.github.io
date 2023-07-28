@@ -3,7 +3,7 @@ import '../App.css'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import TypingAnimation from './TypingAnimation';
-import samplePDF1 from "./Resume.pdf";
+import samplePDF1 from "./Krish_Shah_Resume.pdf";
 
 function About() {
   const text = "About Me";
