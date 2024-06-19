@@ -69,7 +69,7 @@ a:hover, a:active {
   
 
   font-size: 50px; 
-  height: 93.65vh; 
+  height: 93.55vh; 
   /*
   display: flex;
   flex-direction: row;
@@ -88,12 +88,13 @@ a:hover, a:active {
   margin: 0;
   padding: 0;
   background-color: #8a99c7;
-
+  
 }
+
 
 #Abt{
   width:100%;
-  height: 93.65vh; 
+  height: 93.55vh; 
   background-image: url("./nyc.jpg");
   background-repeat: no-repeat;
   background-position: center;
