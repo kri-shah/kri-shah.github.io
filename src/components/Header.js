@@ -1,39 +1,27 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
-import samplePDF1 from "./Krish_Shah_Resume.pdf";
+import './Header.css';
 
-function Header() { 
+const Header = () => {
   return (
-    <nav>
-      <ul style={{ background: '#203166', display: 'flex', justifyContent: 'space-between', padding: '0 20px', }}> 
-      <li style={{ listStyle: 'none', margin: '0', marginRight: 'auto'}}>
-          <Link to="/">Home</Link>
-        </li>
-
-
-       
-
-        <li style={{ listStyle: 'none', margin: '0' }}>
-          <Link to="/project">Projects</Link>
-        </li>
-        <li style={{ listStyle: 'none', margin: '0'}}>
-          <a href={samplePDF1} target="_blank" rel="noreferrer">Resume</a>
-        </li>
-        <li style={{ listStyle: 'none', margin: '0'}}>
-          
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li style={{ listStyle: 'none', margin: '0' }}>
-          <Link to="/about">About</Link>
-        </li>
-        
-
-       
-       
-       
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <ul className="nav-links">
+          <li id="home"><Link to="/">Home</Link></li>
+          <li><Link to="/project">Projects</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li className="dropdown">
+            <span>Contact</span>
+            <ul className="dropdown-menu">
+              <li><a href="mailto:krish.shah@uconn.edu">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/krish-shah-045680227/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://github.com/kri-shah" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-}
+};
 
 export default Header;

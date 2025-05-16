@@ -1,141 +1,47 @@
+// src/components/AboutMe.js
+
 import React from 'react';
-import '../App.css' 
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import TypingAnimation from './TypingAnimation';
-import samplePDF1 from "./Krish_Shah_Resume.pdf";
-
-function About() {
-  const text = "About Me";
-  const text2 = "Skills and Expierences";
-    const [showSecondTyping, setShowSecondTyping] = React.useState(false);
-    
-    // Function to set showSecondTyping state to true after 3 seconds
-    React.useEffect(() => {
-      const timeoutId = setTimeout(() => {
-        setShowSecondTyping(true);
-      }, 1900); // Delay of 3 seconds 
-      
-      // Clean up function to clear the timeout when the component unmounts
-      return () => clearTimeout(timeoutId);
-    }, []); // Empty dependency array to run this effect only once on mount
-  
+import './AboutMe.css'; // Import the CSS file for styling
+import profilePhoto from './pfp.jpeg'
+const AboutMe = () => {
   return (
-    <body id = "Abt">
-      <body id = "Abt1">
-        <div class="fade-in-image">
-          <img src={require('./Krish.png')} alt="Pic of me"/> 
+    <div className="about-me">
+      <div className="container">
+        <div className="header">
+          <img src={profilePhoto} alt="Krish Shah" className="profile-photo" />
+          <h1>Krish Shah</h1>
+          <p className="subtitle">Aspiring Software Engineer and Quant</p>
         </div>
-      </body>
-      
-      <body id = "Abt2">
-        <br></br>
-        <div class="fade-in-image">
-          <TypingAnimation text={text} level="h1" />
-
-          <p1 id="pa">
-            Hi, I'm Krish Shah! I'm a full-stack developer and AI 
-            undergraduate researcher from the University of Connecticut. I am a rising sophomore studying 
-            Computer Science and Engineering.
-
-          </p1>
-          <br/>
-          <div id="abtme2"> 
-            <div id="sne">
-              {showSecondTyping && <TypingAnimation text={text2} level="h1" />}
+        <div className="content">
+          <section className="about-section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Krish Shah, and I'm currently pursuing a B.S. in Computer Science and B.A. in Applied Mathematics at the University of Connecticut. I'm set to graduate in May 2026.</p>
+            <p>I have a passion for machine learning, finance, and software development. I'm constantly seeking to learn new technologies and improve my skills. I enjoy solving complex problems and am enthusiastic about the opportunities that technology brings to make the world a better place.</p>
+            <p>When I'm not coding, you can find me lifting weights, training Muay Thai, or reading about the latest tech. Feel free to connect with me!</p>
+          </section>
+          <section className="experience-section">
+            <h2>Experiences</h2>
+            <div className="experience">
+              <h3>Berkley Small Business Solutions</h3>
+              <p class="italic"> Software Engineer Intern</p>
             </div>
-            <p1 id="pa2">
-              I have experience using several languages and technologies and am most familiar with Python, Java, C++, 
-              HTML, JavaScript, ReactJS, and CSS. Here are a few of my expierences:
-
-            </p1>
-          </div>
-
-          </div>
-        <br></br>
-        <div class="fade-in-image">
-        <div id="CA"> 
-        <Carousel>
-        <div id="slide1">
-              <div id="pic4">
-                <p></p>
-              </div>
-              <div id="txt1">
-                <br></br>
-                <h id="text1size"> Volunteer for Engineers Without Borders</h>
-                <p id="t1s">
-                -Collaborated with engineers and environmental experts to analyze data and develop strategies to enhance environmental sustainability in Hartford, CT.
-                <br></br> <br></br> 
-                -Conducted comprehensive research to gather relevant data, employing statistical methods and visualization tools to interpret and present findings effectively.
-
-                </p>
-              </div>
+            <div className="experience">
+              <h3>Hillside Ventures</h3>
+              <p class="italic">Portfolio Manager and SaaS Lead</p>
             </div>
-
-            <div id="slide1">
-              <div id="pic2">
-                <p></p>
-              </div>
-              <div id="txt1">
-                <br></br>
-                <h id="text1size">Robotics Programmer for FROST Robotics</h>
-                <p id="t1s">-Program combat robots using Robot Operating System and C++.
-                  <br></br> 
-                  <br></br> 
-                  -Collaborate closely with mechanical and electrical engineers to integrate software and hardware components seamlessly, resulting in highly efficient and reliable combat robots.
-                  <br></br><br></br> 
-                  -Conduct thorough testing and debugging of robot software to ensure optimal battle performance, responsiveness, and precision.
-
-                </p>
-              </div>
+            <div className="experience">
+              <h3>El Gato Laboratory</h3>
+              <p class="italic">Artificial Intelligence Research Assistant</p>
             </div>
-            
-            
-            <div id="slide1">
-              <div id="pic1">
-                <p></p>
-              </div>
-              <div id="txt1">
-                <br></br>
-                <h id="text1size"> Volunteer for America Reads</h>
-                <p id="t1s">
-                  -Tutored third-grade students at Willington Elementary School (2023) and tutored fifth-grader students (2022) at 
-                  <br></br> <br></br> 
-                  -North Windham Elementary School on reading comprehension and algebra skills.</p>
-              </div>
+            <div className="experience">
+              <h3>UConn Information Technology Services</h3>
+              <p class="italic">Software Technical Specialist</p>
             </div>
-            
-            <div id="slide1">
-              <div id="pic3">
-                <p></p>
-              </div>
-              <div id="txt1">
-                <br></br>
-                <h id="text1size"> Crew Member for Dunkin' </h>
-                <p id="t1s">                    
-                  -Oversee inventory for wide-ranging product catalog using Excel
-                  <br/><br/>
-                  -Closely monitor cash handling and balancing registers to ensure proper cash flow distribution
-                  <br/><br/>
-                  -Collaborate with team members to ensure smooth operations during peak hours, contributing to improved customer satisfaction and increased sales.
-
-                </p>
-              </div>   
-            </div>
-          </Carousel>
-          
-          
-          </div>
-          <a id="resume2" href={samplePDF1} target="_blank" rel="noreferrer">Click here or above for my full resume!</a>
+          </section>
         </div>
-        
-        
-        
-      
-      </body>
-      
-    </body>
+      </div>
+    </div>
   );
-}
+};
 
-export default About;
+export default AboutMe;

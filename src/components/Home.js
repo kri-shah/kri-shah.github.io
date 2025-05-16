@@ -1,10 +1,10 @@
 import React from 'react';
 import TypingAnimation from './TypingAnimation';
-import '../App.css' 
+import './Home.css' 
 
 function Home() {
-  const text = "Hi My Name Is Krish Shah!";
-  const text2 = "I'm a Computer Science and Engineering Undergrad at the University of Connecticut.";
+  const text = "Hi I'm Krish!";
+  const text2 = "I'm a SWE Intern, Analyst, and Undergrad @ UConn!";
   
   // State to keep track of when to show the second TypingAnimation component
   const [showSecondTyping, setShowSecondTyping] = React.useState(false);
@@ -13,7 +13,7 @@ function Home() {
   React.useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowSecondTyping(true);
-    }, 4000); // Delay of 3 seconds 
+    }, 2000); // Delay of 3 seconds 
     
     // Clean up function to clear the timeout when the component unmounts
     return () => clearTimeout(timeoutId);
@@ -21,19 +21,11 @@ function Home() {
   
   return (
     
-    <body className="HomePage">
-      <body className="Home1">
+    <div className="HomePage">
+      <TypingAnimation text={text} level="h5" />
         
-        <TypingAnimation text={text} level="h1" />
-        <body className="Home2">
-          {/* Render the second TypingAnimation component only if showSecondTyping is true */}
-
-          {showSecondTyping && <TypingAnimation text={text2} level="p1" />}
-        </body>
-      </body>
-      
-      
-    </body>
+      {showSecondTyping && <TypingAnimation text={text2} level="p1" />}
+    </div>
     
     
    

@@ -1,0 +1,110 @@
+/* General header styling */
+header {
+  background-color: #203166; /* Ensures full header background color */
+  height: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navigation links styling */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around; /* Ensures even spacing */
+  align-items: center; /* Centers items vertically */
+  width: 100%;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+a:link, a:visited {
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown span {
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px; /* Adjusted to ensure dropdown is below the header */
+  left: 0;
+  background-color: #203166; /* Matching the header background color */
+  border: 1px solid #ccc;
+  padding: 0;
+  list-style: none;
+  min-width: 150px; /* Ensures dropdown has a minimum width */
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #17234b; /* Slightly darker background on hover */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+      height: auto;
+  }
+  
+  .nav-links {
+      flex-direction: column;
+  }
+  
+  .nav-links li {
+      width: 100%;
+      text-align: center;
+  }
+  
+  a:link, a:visited, .dropdown span {
+      padding: 10px;
+      font-size: 18px;
+  }
+  
+  .dropdown-menu {
+      position: static;
+      min-width: 100%;
+  }
+  
+  .dropdown-menu li a {
+      padding: 10px;
+  }
+}

@@ -1,127 +1,83 @@
-import React, { useState } from 'react';
-import '../Projects.css';
+import React from 'react';
+import './Projects.css';
 import TypingAnimation from './TypingAnimation';
 
-function Projects() {
-  const text = "Here are a few of my projects!";
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-  const [isHovered2, setIsHovered2] = useState(false);
-
-  const handleMouseEnter2 = () => {
-    setIsHovered2(true);
-  };
-
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
-
-  const [isHovered3, setIsHovered3] = useState(false);
-
-  const handleMouseEnter3 = () => {
-    setIsHovered3(true);
-  };
-
-  const handleMouseLeave3 = () => {
-    setIsHovered3(false);
-  };
-
-  const [isHovered4, setIsHovered4] = useState(false);
-
-  const handleMouseEnter4 = () => {
-    setIsHovered4(true);
-  };
-
-  const handleMouseLeave4 = () => {
-    setIsHovered4(false);
-  };
-
-  return (
-    <div id="ProjPage"> 
-      <br/>
-      <TypingAnimation text={text} level="h4" />
-    
-      <div id="projects-container">
-        <a
-          id="proj1"
-          href="https://github.com/kri-shah/kri-shah.github.io"
-          target="_blank"
-          rel="noreferrer"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div id="proj1img"></div>
-          <h5>Portfolio Website</h5>
-          <p1>Personal portfolio website built using ReactJS, HTML, CSS, and JavaScript, Node.js</p1>
-        </a>
-        <a
-          id="proj2"
-          href="https://github.com/kri-shah/Hill-Code"
-          target="_blank"
-          rel="noreferrer"
-          onMouseEnter={handleMouseEnter2}
-          onMouseLeave={handleMouseLeave2}
-        >
-          <div id="proj2img"></div>
-          <h3>Hill Cipher</h3>
-          <p1>C++ implementation of the Hill cipher: a polygraphic substitution cipher based on linear algebra.</p1>
-        </a>
-        <a
-          id="proj3"
-          href="https://github.com/kri-shah/Honors-Project"
-          target="_blank"
-          rel="noreferrer"
-          onMouseEnter={handleMouseEnter3}
-          onMouseLeave={handleMouseLeave3}
-        >
-          <div id="proj3img"></div>
-          <h3>"Are You the One"</h3>
-          <p1>Emulates different playing algorithms for MTV's hit show "Are You the One."</p1>
-        </a>
-        <a
-          id="proj4"
-          href="https://github.com/kri-shah/Hill-Code"
-          target="_blank"
-          rel="noreferrer"
-          onMouseEnter={handleMouseEnter4}
-          onMouseLeave={handleMouseLeave4}
-        >
-          <div id="proj4img"></div>
-          <h3>Sequence Detector</h3>
-          <p1>A sequence detector built using shift registers. Output goes high for 0001 or 1110.</p1>
-        </a>
-      </div>
-      <br/><br/><br/><br/>
-      <div id="OC"> 
-        <a id="GitHub2" href={'https://github.com/kri-shah'} target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-      <div id="gittxt1" style={{ display: isHovered ? 'block' : 'none' }}>
-        <p1>Click to view the Github!</p1>
-      </div>
-      
-      <div id="gittxt2" style={{ display: isHovered2 ? 'block' : 'none' }}>
-        <p1>Click to view the Github!</p1>
-      </div>
-      
-
-      <div id="gittxt3" style={{ display: isHovered3 ? 'block' : 'none' }}>
-        <p1>Click to view the Github!</p1>
-      </div>
-
-      <div id="gittxt4" style={{ display: isHovered4 ? 'block' : 'none' }}>
-        <p1>Click to view the Github!</p1>
-      </div>
-
+import portfolioImg from '../port.png';
+import compresssImg from '../zip.jpeg';
+import mmaiImg from '../cnn.png';
+import dvrImg from '../dvr.jpeg';
+import SCImg from '../Seam Carving.png'
+import OKCImg from '../OKC.png'
+const projects = [
+  {
+    name: 'MMAI',
+    description: 'Developed a full-stack machine learning web application by training a predictive model for MMA fight outcomes, achieving a 70% accuracy',
+    technologies: 'TensorFlow, Keras, Scikit-learn, Flask, JavaScript, HTML/CSS',
+    githubLink: 'https://github.com/kri-shah/MMAI',
+    image: mmaiImg
+  },
+  {
+    name: 'Multithreaded DVR Protocol',
+    description: 'Implemented a multithreaded DVR simulation in C with pthreads, incorporating dynamic network topology changes for realism',
+    technologies: 'C, POSIX Threads, Networks',
+    githubLink: 'https://github.com/kri-shah/C-Projects',
+    image: dvrImg
+  },
+  {
+    name: 'Data Compression /Decompression Tool',
+    description: 'Engineered a high-efficiency tool using advanced algorithms such as Huffman coding, Burrows-Wheeler Transform, and Move-to-Front coding',
+    technologies: 'Python, Heapq, Radix Sort',
+    githubLink: 'https://github.com/kri-shah/Data-Compression-Decompression-Tool',
+    image: compresssImg
+  },
+  {
+    name: 'Portfolio Website',
+    description: 'Utilized React.js, HTML, CSS, and JavaScript to build an interactive showcase of professional accomplishments, projects, and skills',
+    technologies: 'React.js, Node.js, JavaScript, HTML/CSS',
+    githubLink: 'https://github.com/kri-shah/kri-shah.github.io',
+    image: portfolioImg
+  },
+  {
+    name: 'Seam Carving',
+    description: 'Utilized Python and dynamic programming to develop and implement an algorithm for intelligent image resizing to remove vertical seams of similar pixels, minimizing image artifacts',
+    technologies: 'Python, Numpy, Imagematrix, Matplotlib (Benchmarking)',
+    githubLink: 'https://github.com/kri-shah/Seam-Caving',
+    image: SCImg
+  },
+  {
+    name: 'Basketball Database',
+    description: 'Designed a PostgreSQL database schema for Oklahoma City Thunder statistics, utilizing Python scripts and established data consistency and integrity by implementing foreign keys within the database',
+    technologies: 'SQL, PostgreSQL, Python, Psycopg2',
+    githubLink: 'https://github.com/kri-shah/',
+    image: OKCImg
+  }
   
-    </div>
-  );
-}
+];
 
-export default Projects;
+const ProjectCard = ({ project }) => (
+  <div className="project-card">
+    <img src={project.image} alt={project.name} className="project-image" />
+    <h2>{project.name}</h2>
+    <p>{project.description}</p>
+    <h3>{project.technologies}</h3>
+    <a id="github" href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-link">
+      <img src={require('../github.png')} alt="GitHub" className="github-icon" />
+    </a>
+  </div>
+);
+
+const App = () => (
+  <div className="App">
+    <header className="App-header">
+    <TypingAnimation text="Projects" level="h1" />
+    </header>
+
+    <div className="projects-container">
+      {projects.map((project, index) => (
+        <ProjectCard key={index} project={project} />
+      ))}
+    </div>
+  </div>
+);
+
+export default App;
