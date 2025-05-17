@@ -13,7 +13,7 @@ const Header = () => {
           <li className="dropdown">
             <span>Contact</span>
             <ul className="dropdown-menu">
-              <li><a href="mailto:krish.shah@uconn.edu">Email</a></li>
+              <li><a href="mailto:krishdhshah@gmail.com">Email</a></li>
               <li><a href="https://www.linkedin.com/in/krish-shah-045680227/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/kri-shah" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
