@@ -1,33 +1,50 @@
-import { ExternalLink, Code2 } from 'lucide-react';
+import { ExternalLink, Code2, Github } from 'lucide-react';
 
 const projects = [
   {
+    title: 'eBay-Deal-Scraper',
+    link: null,
+    github: 'https://github.com/kri-shah/eBay-Deal-Scraper',
+    status: 'in-progress',
+    description: 'Engineered a full-stack deal intelligence platform that ingests eBay listings into a historical database and surfaces statistically underpriced items.',
+    tech: ['Python', 'React', 'AWS Lambda', 'AWS API Gateway', 'AWS EventBridge', 'AWS DynamoDB', 'eBay REST API'],
+    color: 'var(--color-ide-accent)',
+  },
+  {
     title: 'MMAI',
     link: 'https://mmai.infoql.com',
+    github: 'https://github.com/kri-shah/MMAI',
+    status: 'completed',
     description: 'Built a Flask web app for real-time MMA fight predictions; trained neural network achieving ~70% accuracy.',
     tech: ['Python', 'TensorFlow', 'Keras', 'Pandas', 'Scikit-learn', 'Flask', 'JavaScript', 'HTML/CSS'],
-    color: 'var(--color-ide-accent)',
+    color: 'var(--color-ide-accent-green)',
   },
   {
     title: 'Multithreaded Distance Vector Routing Protocol',
     link: null,
+    github: 'https://github.com/kri-shah/Multithreaded-DVR',
+    status: 'completed',
     description: 'Implemented a thread-safe DVR protocol using mutexes to parallelize routing updates.',
     tech: ['C', 'POSIX Threads', 'Computer Networks'],
-    color: 'var(--color-ide-accent-green)',
+    color: 'var(--color-ide-accent-yellow)',
   },
   {
     title: 'ETF Portfolio Optimization (Deep Reinforcement Learning)',
     link: null,
+    github: 'https://github.com/kri-shah/DRL-Portfolio-Management',
+    status: 'completed',
     description: 'Developed PPO and SAC agents for ETF allocation, outperforming the S&P 500 by +0.41 Sharpe ratio.',
     tech: ['Python', 'PyTorch', 'Gym', 'Pandas', 'NumPy'],
-    color: 'var(--color-ide-accent-yellow)',
+    color: 'var(--color-ide-accent-purple)',
   },
   {
     title: 'NBA Statistics Database',
     link: null,
+    github: null,
+    status: 'completed',
     description: 'Designed and deployed a fully normalized (3NF) PostgreSQL database for team and player statistics.',
     tech: ['PostgreSQL', 'SQL', 'Python', 'Psycopg2'],
-    color: 'var(--color-ide-accent-purple)',
+    color: 'var(--color-ide-accent)',
   },
 ];
 
@@ -57,6 +74,12 @@ const Projects = () => {
                 <span className="text-sm text-[var(--color-ide-text-dim)] truncate">
                   project_{String(index + 1).padStart(2, '0')}.md
                 </span>
+                {project.status === 'in-progress' && (
+                  <span className="flex items-center gap-1.5 ml-auto text-xs text-[var(--color-ide-accent-yellow)]">
+                    <span className="w-2 h-2 rounded-full bg-[var(--color-ide-accent-yellow)] animate-pulse"></span>
+                    [in progress]
+                  </span>
+                )}
               </div>
 
               {/* Content */}
@@ -68,16 +91,30 @@ const Projects = () => {
                   >
                     {project.title}
                   </h3>
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[var(--color-ide-text-dim)] hover:text-[var(--color-ide-accent)] transition-colors flex-shrink-0"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--color-ide-text-dim)] hover:text-[var(--color-ide-text)] transition-colors"
+                        title="View on GitHub"
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[var(--color-ide-text-dim)] hover:text-[var(--color-ide-accent)] transition-colors"
+                        title="View live site"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {project.link && (
