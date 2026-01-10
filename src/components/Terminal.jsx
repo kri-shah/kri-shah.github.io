@@ -212,13 +212,19 @@ const Terminal = ({ isOpen, onClose, onMinimize }) => {
         {/* Terminal body */}
         <div
           ref={terminalRef}
-          className="h-[300px] md:h-[350px] overflow-y-auto p-4 font-mono text-sm"
-          onClick={() => inputRef.current?.focus()}
+          className="h-[300px] md:h-[350px] overflow-y-auto p-4 font-mono text-sm select-text"
+          onClick={(e) => {
+            // Only focus input if no text is being selected
+            const selection = window.getSelection();
+            if (!selection || selection.toString().length === 0) {
+              inputRef.current?.focus();
+            }
+          }}
         >
           {history.map((item, index) => (
             <div key={index} className="leading-relaxed">
               {item.type === 'command' && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 cursor-text">
                   <span className="text-[var(--color-ide-accent-green)]">➜</span>
                   <span className="text-[var(--color-ide-accent)]">~</span>
                   <span className="text-[var(--color-ide-text)]">{item.content}</span>
@@ -226,15 +232,15 @@ const Terminal = ({ isOpen, onClose, onMinimize }) => {
               )}
               {item.type === 'output' && (
                 <div 
-                  className="text-[var(--color-ide-text)] pl-6"
+                  className="text-[var(--color-ide-text)] pl-6 cursor-text"
                   dangerouslySetInnerHTML={{ __html: item.content || '&nbsp;' }}
                 />
               )}
               {item.type === 'error' && (
-                <div className="text-[#f38ba8] pl-6">{item.content}</div>
+                <div className="text-[#f38ba8] pl-6 cursor-text">{item.content}</div>
               )}
               {item.type === 'system' && (
-                <div className="text-[var(--color-ide-text-dim)]">{item.content || '\u00A0'}</div>
+                <div className="text-[var(--color-ide-text-dim)] cursor-text">{item.content || '\u00A0'}</div>
               )}
             </div>
           ))}
