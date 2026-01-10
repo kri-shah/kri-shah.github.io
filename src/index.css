@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+  --color-ide-bg: #1e1e2e;
+  --color-ide-sidebar: #181825;
+  --color-ide-panel: #11111b;
+  --color-ide-border: #313244;
+  --color-ide-accent: #89b4fa;
+  --color-ide-accent-green: #a6e3a1;
+  --color-ide-accent-yellow: #f9e2af;
+  --color-ide-accent-purple: #cba6f7;
+  --color-ide-accent-pink: #f5c2e7;
+  --color-ide-text: #cdd6f4;
+  --color-ide-text-dim: #6c7086;
+  --color-ide-selection: #45475a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mono);
+  background-color: var(--color-ide-bg);
+  color: var(--color-ide-text);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ide-panel);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ide-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ide-text-dim);
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-ide-selection);
+}
