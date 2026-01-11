@@ -2,7 +2,7 @@ import { ExternalLink, Code2, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: 'eBay-Deal-Scraper',
+    title: 'eBay Deal Scraper',
     link: null,
     github: 'https://github.com/kri-shah/eBay-Deal-Scraper',
     status: 'in-progress',
