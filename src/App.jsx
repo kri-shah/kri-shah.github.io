@@ -64,25 +64,37 @@ function App() {
         {/* Tab bar */}
         <div className="sticky top-0 z-30 bg-[var(--color-ide-sidebar)] border-b border-[var(--color-ide-border)]">
           <div className="flex items-center">
-            {/* Active tab */}
-            <div className="flex items-center gap-2 px-4 py-2 bg-[var(--color-ide-bg)] border-r border-[var(--color-ide-border)] text-[var(--color-ide-text)]">
-              <svg className="w-4 h-4 text-[var(--color-ide-accent)]" viewBox="0 0 24 24" fill="currentColor">
+            {/* portfolio.tsx tab */}
+            <a
+              href="#hero"
+              className={`flex items-center gap-2 px-4 py-2 border-r border-[var(--color-ide-border)] cursor-pointer transition-colors ${
+                activeSection === 'hero'
+                  ? 'bg-[var(--color-ide-bg)] text-[var(--color-ide-text)] hover:text-[var(--color-ide-accent)]'
+                  : 'text-[var(--color-ide-text-dim)] hover:bg-[var(--color-ide-panel)]/50 hover:text-[var(--color-ide-text)]'
+              }`}
+            >
+              <svg className={`w-4 h-4 ${activeSection === 'hero' ? 'text-[var(--color-ide-accent)]' : ''}`} viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" fill="none" />
               </svg>
               <span className="text-sm">portfolio.tsx</span>
-              <button className="ml-2 text-[var(--color-ide-text-dim)] hover:text-[var(--color-ide-text)]">
-                ×
-              </button>
-            </div>
+              <span className="ml-2 text-[var(--color-ide-text-dim)] hover:text-[var(--color-ide-text)]">×</span>
+            </a>
             
-            {/* Inactive tab */}
-            <div className="flex items-center gap-2 px-4 py-2 text-[var(--color-ide-text-dim)] hover:bg-[var(--color-ide-panel)]/50 cursor-pointer">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {/* README.md tab */}
+            <a
+              href="#experience"
+              className={`flex items-center gap-2 px-4 py-2 cursor-pointer transition-colors ${
+                activeSection === 'experience' || activeSection === 'projects'
+                  ? 'bg-[var(--color-ide-bg)] text-[var(--color-ide-text)] hover:text-[var(--color-ide-accent)]'
+                  : 'text-[var(--color-ide-text-dim)] hover:bg-[var(--color-ide-panel)]/50 hover:text-[var(--color-ide-text)]'
+              }`}
+            >
+              <svg className={`w-4 h-4 ${activeSection === 'experience' || activeSection === 'projects' ? 'text-[var(--color-ide-accent)]' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                 <polyline points="14 2 14 8 20 8" />
               </svg>
               <span className="text-sm">README.md</span>
-            </div>
+            </a>
           </div>
         </div>
 
