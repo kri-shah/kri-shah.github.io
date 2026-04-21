@@ -2,6 +2,13 @@ import { Briefcase, MapPin, Calendar } from 'lucide-react';
 
 const experiences = [
   {
+    title: 'Deep Learning Researcher',
+    company: 'Intelligent Systems Lab',
+    location: 'Storrs, CT',
+    period: 'December 2025 – Present',
+    current: true,
+  },
+  {
     title: 'Software Engineer Intern',
     company: 'Pratt & Whitney',
     location: 'Storrs, CT',

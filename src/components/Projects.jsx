@@ -29,15 +29,6 @@ const projects = [
     color: 'var(--color-ide-accent-yellow)',
   },
   {
-    title: 'ETF Portfolio Optimization (Deep Reinforcement Learning)',
-    link: null,
-    github: 'https://github.com/kri-shah/DRL-Portfolio-Management',
-    status: 'completed',
-    description: 'Developed PPO and SAC agents for ETF allocation, outperforming the S&P 500 by +0.41 Sharpe ratio.',
-    tech: ['Python', 'PyTorch', 'Gym', 'Pandas', 'NumPy'],
-    color: 'var(--color-ide-accent-purple)',
-  },
-  {
     title: 'NBA Statistics Database',
     link: null,
     github: null,
@@ -45,7 +36,7 @@ const projects = [
     description: 'Designed and deployed a fully normalized (3NF) PostgreSQL database for team and player statistics.',
     tech: ['PostgreSQL', 'SQL', 'Python', 'Psycopg2'],
     color: 'var(--color-ide-accent)',
-  },
+  }
 ];
 
 const Projects = () => {
