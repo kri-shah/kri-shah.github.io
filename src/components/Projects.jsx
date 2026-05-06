@@ -20,13 +20,22 @@ const projects = [
     color: 'var(--color-ide-accent-green)',
   },
   {
+    title: 'Flashcards App',
+    link: 'https://krishah.infoql.com/Flashcard/',
+    github: 'https://github.com/kri-shah/Flashcard',
+    status: 'in-progress',
+    description: 'A minimalist flashcard app. Create decks, study them, and back up your data as a JSON file.',
+    tech: ['React', 'Tailwind CSS', 'HTML/CSS'],
+    color: 'var(--color-ide-accent-yellow)',
+  },
+  {
     title: 'Multithreaded Distance Vector Routing Protocol',
     link: null,
     github: 'https://github.com/kri-shah/Multithreaded-DVR',
     status: 'completed',
     description: 'Implemented a thread-safe DVR protocol using mutexes to parallelize routing updates.',
     tech: ['C', 'POSIX Threads', 'Computer Networks'],
-    color: 'var(--color-ide-accent-yellow)',
+    color: 'var(--color-ide-accent)',
   },
   {
     title: 'NBA Statistics Database',
@@ -35,7 +44,7 @@ const projects = [
     status: 'completed',
     description: 'Designed and deployed a fully normalized (3NF) PostgreSQL database for team and player statistics.',
     tech: ['PostgreSQL', 'SQL', 'Python', 'Psycopg2'],
-    color: 'var(--color-ide-accent)',
+    color: 'var(--color-ide-accent-green)',
   }
 ];
 
