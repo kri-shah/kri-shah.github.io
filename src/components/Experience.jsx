@@ -12,8 +12,8 @@ const experiences = [
     title: 'Software Engineer Intern',
     company: 'Pratt & Whitney',
     location: 'Storrs, CT',
-    period: 'September 2025 – Present',
-    current: true,
+    period: 'September 2025 – May 2026',
+    current: false,
   },
   {
     title: 'Data Science Intern',
